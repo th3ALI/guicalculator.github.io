@@ -2,7 +2,7 @@
   body {
     background-color: rgb(1, 1, 1);
 /* 
-    height: 74vh;
+  /* height: 74vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
