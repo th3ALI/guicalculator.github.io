@@ -1,3 +1,8 @@
+@media only screen and (max-width: 12000px) and (max-height: 12000px){
+  body {
+    background-color: rgb(1, 1, 1);
+  }}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +13,9 @@
   outline: none;
 }
 
-body {
+/* body {
   background-color: rgb(1, 1, 1);
-}
+} */
 
 .answer{
   width: 205px;
@@ -71,7 +76,7 @@ button {
 }
 
 .container {
-  height: 100vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
