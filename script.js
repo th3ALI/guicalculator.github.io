@@ -56,9 +56,17 @@ let equalArray = () => {
 };
 
 let ifValid = () => {
-    if (typeof history[history.length - 1] == "number" && history[history.length - 1] !== ("+" || "-" || "*" || "/" || "")) {
+    if (typeof history[history.length - 1] == "number" && history[history.length - 1] !== ("+" || "-" || "*" || "/" || "") || input.value !== "") {
         return true;
     } else { return false; }
+};
+
+let addop = (arr) => {
+    if (history == []) {
+        console.log("Enter a number first!");
+    } else if (answer.textContent = "") {
+        console.log("Enter a number first!");
+    } else { history.push(arr); }
 };
 
 let resetI = () => {
@@ -83,50 +91,58 @@ zero.addEventListener("click", () => {
 
 // event listener for operators
 plus.addEventListener("click", () => {
-    pushToHistory();
-    showHistory();
-    equalArray();
-    showAnswer();
     if (ifValid()) {
-        history.push("+");
+        pushToHistory();
         showHistory();
-    } else { console.log("cannot enter multiple operators"); }
+        equalArray();
+        showAnswer();
+        if (ifValid()) {
+            addop("*");
+            showHistory();
+        } else { console.log("cannot enter multiple operators"); }
+    }
     // console.log(history, typeof history[0]);
 });
 
 min.addEventListener("click", () => {
-    pushToHistory();
-    showHistory();
-    equalArray();
-    showAnswer();
     if (ifValid()) {
-        history.push("-");
+        pushToHistory();
         showHistory();
-    } else { console.log("cannot enter multiple operators"); }
+        equalArray();
+        showAnswer();
+        if (ifValid()) {
+            addop("*");
+            showHistory();
+        } else { console.log("cannot enter multiple operators"); }
+    }
     // console.log(history, typeof history[0]);
 });
 
 mul.addEventListener("click", () => {
-    pushToHistory();
-    showHistory();
-    equalArray();
-    showAnswer();
     if (ifValid()) {
-        history.push("*");
+        pushToHistory();
         showHistory();
-    } else { console.log("cannot enter multiple operators"); }
+        equalArray();
+        showAnswer();
+        if (ifValid()) {
+            addop("*");
+            showHistory();
+        } else { console.log("cannot enter multiple operators"); }
+    }
     // console.log(history, typeof history[0]);
 });
 
 div.addEventListener("click", () => {
-    pushToHistory();
-    showHistory();
-    equalArray();
-    showAnswer();
     if (ifValid()) {
-        history.push("/");
+        pushToHistory();
         showHistory();
-    } else { console.log("cannot enter multiple operators"); }
+        equalArray();
+        showAnswer();
+        if (ifValid()) {
+            addop("*");
+            showHistory();
+        } else { console.log("cannot enter multiple operators"); }
+    }
     // console.log(history, typeof history[0]);
 });
 
