@@ -91,6 +91,11 @@ button {
   nav-down: auto;
 }
 
+.backspace{
+  font-size: 100%;
+  font-weight: 900;
+}
+
 /* .all {
   padding: 10px;
   border: 5px solid whitesmoke;
