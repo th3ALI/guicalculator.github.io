@@ -65,6 +65,8 @@ button {
   background-color: rgba(23, 23, 23, 0.9);
   border-radius: 50px;
   color: rgba(156, 210, 97, 0.82);
+  font-size: 100%;
+  font-weight: 900;
 }
 
 .clear {
@@ -89,11 +91,6 @@ button {
   justify-content: baseline;
   align-items: baseline;
   nav-down: auto;
-}
-
-.backspace{
-  font-size: 100%;
-  font-weight: 900;
 }
 
 /* .all {
